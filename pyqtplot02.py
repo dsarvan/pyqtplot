@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # File: pyqtplot02.py
 # Name: D.Saravanan
-# Date: 07/07/2023
+# Date: 08/07/2023
 
 """ Script to create plot using the PlotWidget in PyQtGraph """
 
