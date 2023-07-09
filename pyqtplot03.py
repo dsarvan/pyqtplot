@@ -36,7 +36,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.graphWidget.plot(hour, temperature, pen=lvalue)
 
 
-
 def main():
     """Need one (and only one) QApplication instance per application.
     Pass in sys.argv to allow command line arguments for the application.
