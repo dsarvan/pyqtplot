@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# File: pyqtplot02.py
+# File: pyqtplot03.py
 # Name: D.Saravanan
 # Date: 09/07/2023
 
