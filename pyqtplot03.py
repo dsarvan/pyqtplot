@@ -9,7 +9,6 @@ import sys
 
 import pyqtgraph as pg
 from PyQt6 import QtCore, QtWidgets
-from pyqtgraph import exporters
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -19,7 +18,7 @@ class MainWindow(QtWidgets.QMainWindow):
         super().__init__()
 
         # set the size parameters (width, height) pixels
-        self.setFixedSize(QtCore.QSize(400, 300))
+        self.setFixedSize(QtCore.QSize(640, 480))
 
         # set the central widget of the window
         self.graphWidget = pg.PlotWidget()
@@ -36,9 +35,6 @@ class MainWindow(QtWidgets.QMainWindow):
         # plot data: x, y values with lines drawn using Qt's QPen types
         self.graphWidget.plot(hour, temperature, pen=lvalue)
 
-        # create an exporter instance, give it the item to export
-        self.exporter = exporters.ImageExporter(self.graphWidget.plotItem)
-        self.exporter.export("pyqtplot03.png")
 
 
 def main():
