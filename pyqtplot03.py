@@ -33,8 +33,8 @@ class MainWindow(QtWidgets.QMainWindow):
             color=(220, 220, 220), width=1, style=QtCore.Qt.PenStyle.SolidLine
         )
 
-        # plot data: x, y values
-        self.graphWidget.plot(hour, temperature)
+        # plot data: x, y values with lines drawn using Qt's QPen types
+        self.graphWidget.plot(hour, temperature, pen=lvalue)
 
         # create an exporter instance, give it the item to export
         self.exporter = exporters.ImageExporter(self.graphWidget.plotItem)
