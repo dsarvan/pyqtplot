@@ -53,7 +53,7 @@ class MainWindow(QtWidgets.QMainWindow):
         """plot data: abscissa, ordinate values with lines
         drawn using Qt's QPen types & marker '+'"""
 
-        # set the line color in 3-tuple of int values, line width in pixels, line style
+        # set line color in hex notation as string, line width in pixels, line style
         lvalue = pg.mkPen(color=lcolor, width=1, style=QtCore.Qt.PenStyle.SolidLine)
 
         self.graphWidget.plot(
@@ -77,8 +77,7 @@ def main():
     temperature_1 = [30, 32, 34, 32, 33, 31, 29, 32, 35, 45]
     temperature_2 = [50, 35, 44, 22, 38, 32, 27, 38, 32, 44]
 
-    # an instance of the class MainWindow
-    window = MainWindow()
+    window = MainWindow()  # an instance of the class MainWindow
     window.graphPlot(hour, temperature_1, "Sensor 1", "#d81b60", "#004d40")
     window.graphPlot(hour, temperature_2, "Sensor 2", "#1e88e5", "#ffc107")
     window.show()  # windows are hidden by default
