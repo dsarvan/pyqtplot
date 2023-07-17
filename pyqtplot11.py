@@ -44,9 +44,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self.graphWidget.addLegend()
 
         # set the background grid for both the x and y axis
-        self.graphWidget.showGrid(x=True, y=True)
+        self.graphWidget.showGrid(x=True, y=True, alpha=0.5)
 
-        # set the line color in 3-tuple of int values, line width in pixels, line style
+        # set line color in hex notation as string, line width in pixels, line style
         lvalue = pg.mkPen(color="#77ab56", width=1, style=QtCore.Qt.PenStyle.SolidLine)
 
         # plot data: x, y values with lines drawn using Qt's QPen types
@@ -58,6 +58,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.timer.start()
 
     def update_data_line(self):
+        """Method uses QTimer to update the data every 50ms."""
+
         self.xval = self.xval[1:]
         self.xval.append(self.xval[-1] + 1)
 
